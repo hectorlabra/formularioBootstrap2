@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Título con fondo gris claro -->
+        <div class="bg-light p-3 mb-4">
+            <h1 class="text-center">Payment Form Example</h1>
+        </div>
+
+        <!-- Formulario con borde y esquinas curvadas -->
+        <div class="border rounded p-4">
+            <!-- Alerta de éxito o error -->
+            <div class="alert alert-danger" role="alert">
+                Some fields are missing
+            </div>
+
+            <form>
+                <!-- Primera fila: Card #, CVC #, Amount -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="cardNumber" class="form-label">Card #</label>
+                        <input type="number" class="form-control" id="cardNumber" placeholder="Card Number">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cvcNumber" class="form-label">CVC #</label>
+                        <input type="number" class="form-control" id="cvcNumber" placeholder="CVC Number">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="Amount">
+                    </div>
+                </div>
+
+                <!-- Segunda fila: First Name, Last Name -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <!-- Tercera fila: City, State, Postal Code -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-select" id="state">
+                            <option selected>Pick a state</option>
+                            <option value="1">State 1</option>
+                            <option value="2">State 2</option>
+                            <option value="3">State 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="number" class="form-control" id="postalCode" placeholder="Postal Code">
+                    </div>
+                </div>
+
+                <!-- Cuarta fila: Radios de selección y Message -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Payment Method</label>
+                        <div class="d-flex">
+                            <div class="form-check me-2">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa">
+                                <label class="form-check-label bg-dark text-white p-2 rounded" for="visa">
+                                    <i class="fab fa-cc-visa"></i> Visa
+                                </label>
+                            </div>
+                            <div class="form-check me-2">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard">
+                                <label class="form-check-label bg-dark text-white p-2 rounded" for="mastercard">
+                                    <i class="fab fa-cc-mastercard"></i> MasterCard
+                                </label>
+                            </div>
+                            <div class="form-check me-2">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="amex" value="amex">
+                                <label class="form-check-label bg-dark text-white p-2 rounded" for="amex">
+                                    <i class="fab fa-cc-amex"></i> American Express
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="discover" value="discover">
+                                <label class="form-check-label bg-dark text-white p-2 rounded" for="discover">
+                                    <i class="fab fa-cc-discover"></i> Discover
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                        <small class="form-text text-muted">Add any notes here</small>
+                    </div>
+                </div>
+
+                <!-- Borde de separación -->
+                <hr class="divider">
+
+                <!-- Sección de botones con fondo gris claro -->
+                <div class="bg-light p-3 text-end w-100">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
